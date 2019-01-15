@@ -37,6 +37,8 @@ module.exports = {
     }
 }
 
+
+// helper function for the above method.
 let trimSlashes = (str) => str.replace(/^\/|\/$/g, ''),
 
     getChildNodes = (arr) => {
