@@ -1,4 +1,4 @@
-let R = require('Ramda');
+let R = require('ramda');
 
 
 module.exports = {
