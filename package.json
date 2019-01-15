@@ -1,12 +1,14 @@
 {
   "name": "update-jsonkey",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "In many scenario's we need to update a existing json key value with the new one. I have written a api, where we needs to provide a path of the key to update from the root.",
   "main": "src/api.js",
   "scripts": {
+    "commit":"git-cz",
     "test": "mocha src/api.test.js",
     "start": "node src/api.js",
-    "example": "node example.js"
+    "example": "node example.js",
+    "semantic-release": "semantic-release"
   },
   "license": "MIT",
   "dependencies": {
@@ -14,11 +16,14 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
-    "mocha": "5.2.0"
+    "commitizen": "3.0.5",
+    "cz-conventional-changelog": "2.1.0",
+    "mocha": "5.2.0",
+    "semantic-release": "^15.13.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UtkarshYeolekar/update-jsonkey.git"
+    "url": "https://github.com/UtkarshYeolekar/update-jsonkey.git"
   },
   "keywords": [
     "json",
@@ -29,5 +34,8 @@
     "url": "https://github.com/UtkarshYeolekar/update-jsonkey/issues"
   },
   "homepage": "https://github.com/UtkarshYeolekar/update-jsonkey#readme",
-  "author": "Utkarsh Yeolekar <utkarsh.yeolekar@gmail.com> (http://www.letsblogitutkarsh.in/)"
+  "author": "Utkarsh Yeolekar <utkarsh.yeolekar@gmail.com> (http://www.letsblogitutkarsh.in/)",
+  "czConfig":{
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
