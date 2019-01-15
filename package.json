@@ -1,6 +1,6 @@
 {
   "name": "update-jsonkey",
-  "version": "0.0.0-development",
+  "version": "0.0.0-semantically-released",
   "description": "In many scenario's we need to update a existing json key value with the new one. I have written a api, where we needs to provide a path of the key to update from the root.",
   "main": "src/api.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "test": "mocha src/api.test.js",
     "start": "node src/api.js",
     "example": "node example.js",
-    "semantic-release": "semantic-release-pre && npm publish && semantic-release-post"
+    "semantic-release": "semantic-release"
   },
   "license": "MIT",
   "dependencies": {
