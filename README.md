@@ -6,6 +6,10 @@ In many scenario's we need to update a existing json key value with the new one.
 - npm install
 - npm run example
 
+## Unit Testing
+
+- npm run test
+
 ### Sample Json Provided
 
 - In this example, i have provided a sample json initally, you can replace the content with your json, or can pass dynamic json.
