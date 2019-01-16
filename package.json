@@ -35,7 +35,9 @@
   },
   "homepage": "https://github.com/UtkarshYeolekar/update-jsonkey#readme",
   "author": "Utkarsh Yeolekar <utkarsh.yeolekar@gmail.com> (http://www.letsblogitutkarsh.in/)",
-  "czConfig":{
-    "path": "node_modules/cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
