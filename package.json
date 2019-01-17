@@ -6,8 +6,7 @@
   "scripts": {
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements -100 --branches -100 --functions 100 --lines 100",
-    "report-coverage": "./node_modules/.bin/codecov",
-    "test": "istanbul cover -x *.test.js  node_modules/mocha/bin/_mocha -- -R spec src/api.test.js",
+    "test": "istanbul cover -x '*.test.js'  node_modules/mocha/bin/_mocha -- -R spec src/api.test.js",
     "start": "node src/api.js",
     "example": "node example.js",
     "semantic-release": "semantic-release"
