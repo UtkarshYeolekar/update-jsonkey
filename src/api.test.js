@@ -22,4 +22,36 @@ describe("should update json key value",function(){
         expect(result).to.nested.include({'testing': valueToUpdate},"Value not updated");
     });
 
+    it(`should throw property doesn't exist`,function(){
+        expect(() => {
+            const valueToUpdate = {
+                'name':'utkarsh',
+                'designation':"nodejs"
+            };
+            const keyToUpdate = "/abc/";
+            api.updateJson(keyToUpdate,valueToUpdate,originalJson);
+        }).to.throw(`Child Key/Prop Doesn't Exist`);
+    });
+
+    it(`should throw property doesn't exist`,function(){
+        expect(() => {
+            const valueToUpdate = {
+                'name':'utkarsh',
+                'designation':"nodejs"
+            };
+            const keyToUpdate = "/abc/";
+            api.updateJson(keyToUpdate,valueToUpdate,"");
+        }).to.throw(`Child Key/Prop Doesn't Exist`);
+    });
+
+    it(`should throw Provide Valid Key/Path`,function(){
+        expect(() => {
+            const valueToUpdate = {
+                'name':'utkarsh',
+                'designation':"nodejs"
+            };
+            const keyToUpdate = "/";
+            api.updateJson(keyToUpdate,valueToUpdate,"");
+        }).to.throw(`Provide Valid Key/Path`);
+    });
 })

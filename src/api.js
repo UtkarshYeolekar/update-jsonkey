@@ -2,7 +2,6 @@ let R = require('ramda');
 
 
 module.exports = {
-
     updateJson: (path,value,json) => {
         if (path && path != "/" && value != undefined) {
             try {
@@ -17,8 +16,7 @@ module.exports = {
                 let prop = checkPropIfExist(childKeypath, rootKeyjson);
                 if (prop == undefined)
                 {
-                    console.log(`Child Key/Prop Doesn't Exist`);
-                    return;
+                    throw new Error(`Child Key/Prop Doesn't Exist`);
                 }
                 else {
                     let updatedObj = json;
@@ -28,12 +26,12 @@ module.exports = {
                 }
             }
             catch (err) {
-                console.error(`Some error Occured`,err);
                 throw err;
             }
         }
-        else
-            console.log(`Provide Valid Key/Path`);
+        else {
+            throw new Error(`Provide Valid Key/Path`);
+        }
     }
 }
 
@@ -51,8 +49,6 @@ let trimSlashes = (str) => str.replace(/^\/|\/$/g, ''),
         if (json && key != "/") {
             return json[key]
         }
-        else if (key == "/")
-            return json;
         else
             return;
     }
@@ -65,4 +61,3 @@ checkPropIfExist = (path, obj) => {
         let Rpath = R.lensPath(path);
         return R.set(Rpath, value, obj);
 }
-

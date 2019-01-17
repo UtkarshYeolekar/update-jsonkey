@@ -5,7 +5,9 @@
   "main": "src/api.js",
   "scripts": {
     "commit": "git-cz",
-    "test": "mocha src/api.test.js",
+    "check-coverage": "istanbul check-coverage --statements -100 --branches -100 --functions 100 --lines 100",
+    "report-coverage": "./node_modules/.bin/codecov",
+    "test": "istanbul cover -x *.test.js  node_modules/mocha/bin/_mocha -- -R spec src/api.test.js",
     "start": "node src/api.js",
     "example": "node example.js",
     "semantic-release": "semantic-release"
@@ -16,9 +18,11 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
+    "codecov.io": "0.1.6",
     "commitizen": "3.0.5",
     "cz-conventional-changelog": "2.1.0",
     "ghooks": "2.0.4",
+    "istanbul": "0.4.5",
     "mocha": "5.2.0",
     "semantic-release": "^15.13.3"
   },
@@ -41,7 +45,7 @@
       "path": "cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && npm run check-coverage"
     }
   }
 }
