@@ -1,5 +1,8 @@
+[![travis build](https://img.shields.io/travis/UtkarshYeolekar/update-jsonkey.svg)](https://travis-ci.org/UtkarshYeolekar/update-jsonkey)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) 
 [![codecov](https://codecov.io/gh/UtkarshYeolekar/update-jsonkey/branch/master/graph/badge.svg)](https://codecov.io/gh/UtkarshYeolekar/update-jsonkey)
+[![Vesion](https://img.shields.io/npm/v/update-jsonkey.svg)](https://www.npmjs.com/package/update-jsonkey)
+[![Downloads](https://img.shields.io/npm/dm/update-jsonkey.svg)](https://www.npmjs.com/package/update-jsonkey)
 
 # update-jsonkey
 In many scenario's we need to update a existing json key value with the new one. I have written a api, where we needs to provide a path of the key to update from the root.
